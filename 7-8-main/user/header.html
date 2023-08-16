@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<head>
+  <html lang="en">
+     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../style/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+     </head>
+
+     <style>
+      .header{
+        overflow: hidden;
+        background-color: #d1e7dd;
+        padding: 20px 10px;
+        width: 65%;
+      }
+      .header a {
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: auto; 
+        line-height: 25px;
+        border-radius: 4px;
+        font-weight: bold;
+      }
+      .logo{
+        max-width: 70px;
+        float: left;
+        margin-right: 3px;
+      }
+      .header-right{
+        float: right;
+      }
+      .icon{
+        max-width: 50px;
+        float: right;
+      }
+      .res-icon{
+        display: none;
+      }
+
+      .u-modal{
+        width: 15%;
+        position: fixed;
+        z-index: 1;
+        padding-top: 115px;
+        top: 0;
+        overflow: hidden;
+        text-align: center;
+        right: 0;
+        margin-right: 360px;
+        display: none;
+      }
+
+      .modal-content {
+        position: relative;
+        -webkit-animation-name: animatezoom;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatezoom;
+        animation-duration: 0.4s
+      }
+
+      .modal-content a{
+        text-decoration: none;
+        font-size: 18px;  
+        color: white;     
+      }
+
+      .icon-btn{
+        border: none;
+        padding: 0;
+        outline: 0;
+        margin: 0px;
+      }
+
+      a{
+        margin-top: 3px;
+        color: black;
+      }
+
+      @-webkit-keyframes animatetop {
+        from {scale: (0,0);} 
+        to {scale: (1,1);}
+      }
+
+      @keyframes animatetop {
+        from {scale: (0,0);} 
+        to {scale: (1,1);}
+      }
+
+      @media screen and (max-width: 768px){
+        .header{
+          width: 100%;
+        }
+        .hidden{
+          display: none;
+        }
+      }
+      @media screen and (max-width: 768px){
+        .header-right a {
+          display: none;
+          text-align: center;
+        }
+        .header-right a.res-icon {
+          float: right;
+          display: block;
+        }
+         
+        .header-right.responsive{
+          position: relative;
+        }
+        .header-right.responsive.res-icon{
+          position: absolute;
+          top: 0px;
+          right: 0px
+        }
+        .header-right.responsive a{
+          float: none;
+          display: block;
+        }
+      } 
+     </style>
+
+     <script>
+      function myFunction(){
+        var x = document.getElementById("res");
+        if (x.className === "header-right") {
+          x.className += " responsive";
+        } else {
+          x.className = "header-right";
+        }
+      }
+
+     </script>
+
+     <body>
+      <div class="header" >
+        <div>
+          <a href="home.php">
+            <img src="../img/akb-software-logo.png" class="logo"/>
+            <span class="hidden">
+              &ensp;Công ty TNHH Liên doanh<br> Phần mềm AKB Sofware
+            </span>
+          </a>
+        </div>
+
+        <div style="float: right;">
+          <button id="u-icon" class="icon-btn"><img src="user-icon.jpg" class="icon"></button>
+        </div>
+        
+        <div class="header-right" id="res" style="width: 40%;">
+          <a href="home.php">Trang chủ</a>
+          <a href="about.php">Về chỉ số BMI (WHO)</a>
+          <a href="history.php">Lịch sử</a>
+          <a href="excel.php">Xuất Excel</a>
+          <a href="javascript:void(0);" class="res-icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div> 
+      </div>
+
+        <div class="u-modal" id="myModal">
+          <div style="border: 2px solid #d1e7dd; border-radius: 15px;">
+            <div class="modal-content" style="background-color: #d1e7dd;">
+              <div class="row" style="margin-bottom: 10px;">
+                <div class="col-3">
+                  <img src="user-icon.jpg" style="width: 100%; margin: 10px "/>
+                </div>
+                <div class="col-9" style="text-align: center; font-size: 20px; align-items: center; display: flex;">
+                  <span>Họ và tên </span>
+                </div>
+              </div>
+                <a href="info.php"><i class="fa fa-info"></i> &ensp;Thông tin tài khoản</a>
+                <a href="change-password.php">Đổi mật khẩu</a>
+                <a href="../index/logout.php"><i class="fa fa-right-from-bracket"></i> &ensp;Đăng xuất</a>
+            </div>
+          </div>
+        </div>
+      
+      <script>
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("u-icon");
+        btn.onclick = function(){
+          modal.style.display = "block";
+        } 
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+     </script>
+     </body>
+     

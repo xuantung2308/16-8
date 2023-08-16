@@ -1,0 +1,160 @@
+
+	*{
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0%;
+	}
+
+	div{
+		display: block;
+	}
+
+	body{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		place-items: center;
+	}	
+	form {
+		width: 30%;
+		border: 2px solid #d1e7dd;
+		padding: 30px;
+		background: #fff;
+		border-radius: 15px;
+	}
+	
+	h2 {
+		text-align: center;
+		margin-bottom: 40px;
+	}
+	
+	h1{
+		font-size: 50px;
+		color: #097770;
+		text-align: center;
+	}
+
+	.error {
+	   background: #F2DEDE;
+	   color: #A94442;
+	   padding: 10px;
+	   width: 95%;
+	   border-radius: 5px;
+	   margin: 20px auto;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	a:hover{
+		opacity: .7;
+	}
+
+	.surround{
+		border: 1px solid #d1e7dd; 
+		border-radius: 4px; 
+		font-size: 22px; 
+		margin: 20px;
+		justify-content: center;
+	}
+	
+	:placeholder-shown{
+		font-size: 22px;
+	}
+
+	.button {
+		background: #097770;
+		padding: 10px 12px;
+		width: 100%;
+		color: #fff;
+		border: none;
+		border-radius: 120px;
+		text-align: center;
+  		display: inline-block;
+	}
+
+	.button:hover{
+		opacity: .7;
+	}
+
+	button:hover{
+		opacity: .7;
+	}
+
+	.div.showhidden{
+		position: relative;
+		float: right;
+		font-size: 14px;
+	}
+
+	.error {
+		background: #F2DEDE;
+		color: #A94442;
+		padding: 10px;
+		width: 95%;
+		border-radius: 5px;
+		margin: 20px auto;
+	 }
+
+	.value-button {
+		display: flex;
+		border: 1px solid #ddd;
+		margin: 0px;
+		width: 27px;
+		height: 27px;
+		text-align: center;
+		vertical-align: middle;
+		border-radius: 100%;
+		background: #eee;
+		user-select: none;
+		justify-content: center;
+		align-items: center;
+	  }
+	  
+	  .value-button:hover {
+		cursor: pointer;
+	  }
+
+	.title{
+		font-size: 18px;
+    	font-weight: 600;
+    	text-transform: uppercase;
+		text-align: center;
+    	color: #097770;
+    	z-index: auto;
+		flex: none;
+	}
+
+	.innum{
+		border: none;
+		color: #097770;
+		width: 100px;
+		text-align: center;
+		font-size: 35px;
+		margin: 0px;
+	  }
+
+	.div_inum{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		vertical-align: middle;
+	  }
+	
+	input[type=number]::-webkit-inner-spin-button,
+	input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+	}
+	@media only screen and (max-width: 1280px){
+		.hidden{
+			display: none;
+		}
+	}
+	.max-width{
+		max-width: 50px;
+	}
